@@ -1,0 +1,172 @@
+<!-- <!DOCTYPE html>
+<html lang="en"> <!-- Самый главный тег на странице -->
+<head> <!-- Шапка страницы, тут основное ее осписание -->
+    <meta charset="UTF-8"> <!-- Кодировка страницы -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- ДЛя совместимости с IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Для красивого и правильного отображения на телефонах -->
+    <meta name="description" content="Это мой первый пример страницы">  <!-- Описание страницы -->
+    <meta name="author" content="Yana"> <!-- Автор страницы -->
+    <title>Hello</title> <!-- Заголовок вкладки -->
+    <link rel="stylesheet" href="css/style.css"> - <!-- подключение файлов к html в конце тега head -->
+</head>
+<body>
+ 
+     <!-- заголовки разных уровней --> 
+    <h1>first</h1>
+    <h2>secnd</h2>
+
+    <br> <!-- Перенос строки -->
+    <hr> <!-- Линия-разделитель -->
+    
+    <ol type="I" start="3"> <!-- Нумерованный список, атрибуты тип (тип нумерации)  и старт (начало нумерации)-->
+        <li>First</li>  <!-- элемент списка --><!--  
+            li12 и нажимаем tab - создаем 12 элементов списка -->
+    </ol>
+    
+    <!-- У тегов могут быть атрибуты (доп назначение). Они могут быть специфические (для конкретного тега) или же общие -->
+
+    <ul><!-- маркированный список -->
+        <li>first</li>
+    </ul> 
+     <p>text</p> <!-- параграф -->
+
+     <i>text</i> - <!-- курсивное выделение текста -->
+     <em>text</em> <!-- курсивное выделение текста логически -->
+     <b>text</b> - <!-- жирный шрифт -->
+     <strong>text</strong>  <!-- жирный шрифт логически -->
+     <mark>text</mark>  <!-- выделение цветом текста -->
+     <u>text</u> - <!-- подчеркнутый текст -->
+     <s>text</s> - <!-- зачернутый текст -->
+
+     text <sub>2</sub>text <!-- 2 написана маленьким шрифтом внизу текста как в химических формулах -->
+    text <sup>3</sup> <!-- 3 написана маленьким шрифтом сверху текста (как в измерениях) -->
+
+    <span>text</span> <!-- - что-то вроде маркировки текста (визуально не изменяет текст, но можно использовать кусок текста для др целей) -->
+
+    <div><!--  - блок на странице -->
+        <img src="" alt=""> <!-- - картинка с обязательными атрибутами src=" путь"  alt="альтернативный текс, если картинка не грузится" -->
+                            <!-- если в пути поставить / то выйдем из папки на уровень выше, кроме того можно скопировать адрес картинки в интернете и вставить в путь, картинка будет подгружаться -->
+        <a href="">link</a> 
+         <!-- ссылка с атрибутом href="путь (адрес)" обязательно нужно прописать что-то между тегами <a></a> или ссылка не будет работать -->
+    </div> 
+
+    <!-- Семантические теги -->
+    <header></header> <!-- шапка сайта -->
+    <nav></nav> <!-- - навигационная часть - меню -->
+    <article></article> <!-- - оформление записи в блоге -->
+    <section></section> <!-- - деление по секциям сайта -->
+    <aside></aside> <!-- - боковая колонка на сайте с информацией -->
+    <main></main> <!-- - главное содержимое сайта -->
+    <address></address> <!-- - контакты  -->
+    <footer></footer> <!-- - подвал сайта -->
+    <wbr> <!-- - перенос строки при необходимости (т.е. браузер перенесет если допустим не влезет) -->
+    <time></time> <!-- - указание времени -->
+
+    <h2 class="Chapter"><!--  - класс - что-то вроде доп.метки для удобства (пишем внтури тега) -->
+    
+    </h2>
+    <h2 id= "begin"></h2> <!-- - добавили уникальный индентификатор (он может быть только один на странице) также для стилизации и js  удобно -->
+
+ <!--    .box и tab - создаем блок с классом box, а если  .box*2 и tab - создаем сразу два блока-->
+
+ <button></button> <!-- - Кнопка - строчно-блочный элемент! Размещается не по центру, чтобы сделать по центру. делаем блочным и margin -0 auto -->
+
+</body>
+</html>
+<!-- 
+Bootstrap -    готовая библиотека решений
+
+Подключить можно через cdn а можно скачать и подключить патч
+
+Сайт https://getbootstrap.com/docs/5.0/components/card/ там скачивать и копировать готовое начало верстки
+
+Правила использования  grid (сетки):
+
+1. Всегда использовать контейнер
+2. Внутри контейнера идут строки(нужное количество) с классом row
+3.Далее идут колонки (можо сразу указать количество колонок отведенных под один элемент) класс col (если использовать просто класс col то 12 колонок будут автоматически разделены между элементами поровну)
+4.Всегда использовать только одну и ту же структуру (container/ row/ col) (без доп оберток и т.д) иначе не сработает.
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Bootstrap</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Main page</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light"" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+<!-- 
+    ПРИМЕР СЕТКИ: -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-5">1</div>
+            <div class="col-3">2</div>
+            <div class="col-4">3</div>
+        </div>
+
+      </div>
+
+      <div class="col-md-10 offset-md-1"></div> - класс офсет-дает отступ в количество колонок по краям сетки (в данном случае отступ по краям сетки -1 колонка с каждой стороны)
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+  </body>
+</html> -->
+
+СОЗДАЕМ МЕНЮ В ШАПЕКЕ САЙТА
+<header>
+  <div class="container">
+      <nav>
+          <ul class="menu">
+              <li class="menu_item"><a href="#" class="menu_link">Главная</a></li>
+              <li class="menu_item"><a href="#" class="menu_link">Со своим автомобилем</a></li>
+              <li class="menu_item"><a href="#" class="menu_link">На автомобиле компании</a></li>
+              <li class="menu_item"><a href="#" class="menu_link">Требования</a></li>
+              <li class="menu_item"><a href="#" class="menu_link">Контакты</a></li>
+              <li class="menu_item"><a href="#" class="menu_link">Оставить заявку</a></li>
+          </ul>
+      </nav>
+  </div>
+</header>
